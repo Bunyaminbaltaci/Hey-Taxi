@@ -48,9 +48,9 @@ using System.Collections;
         if (GameManager.singeton.gameStatus == GameStatus.PLAYING)
         {
             
-            //transform.position += (transform.forward * speed * Time.deltaTime);
-            myBody.velocity = new Vector3(speed, myBody.velocity.y, myBody.velocity.z);
-            //  kurtfizik.velocity = new Vector3(hareket_hizi, kurtfizik.velocity.y, kurtfizik.velocity.z);
+            transform.position += (transform.forward * speed * Time.deltaTime);
+           // myBody.velocity = new Vector3(speed, myBody.velocity.y, myBody.velocity.z);
+          
 
 
         }
@@ -94,7 +94,7 @@ using System.Collections;
                 }
          
                 endZpos = Mathf.Clamp(endZpos, -5, 5);
-                transform.DOMoveZ(endZpos, 0.10f);
+                transform.DOMoveZ(endZpos, 0.5f);
             }
             
         }

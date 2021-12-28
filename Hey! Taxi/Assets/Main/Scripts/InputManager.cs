@@ -58,13 +58,13 @@ namespace Heytaxi
                 if (difference.x > 0) //sað kaydýrma
                 {
             
-                    swipeType = SwipeType.RIGHT;
+                    swipeType = SwipeType.LEFT;
                 }
                 else if (difference.x < 0) //sol kaydýrma
                 {
                    
 
-                    swipeType = SwipeType.LEFT;
+                    swipeType = SwipeType.RIGHT;
                 }
 
             }
