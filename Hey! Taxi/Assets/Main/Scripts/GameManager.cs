@@ -20,5 +20,10 @@ namespace Heytaxi
                 Destroy(gameObject);
             }
         }
+        private void Start()
+        {
+            
+            singeton.currentCarIndex = SaveManager.instance.currentCostume;
+        }
     }
 }

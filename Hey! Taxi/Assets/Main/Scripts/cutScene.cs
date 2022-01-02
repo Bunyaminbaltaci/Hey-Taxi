@@ -25,7 +25,7 @@ public class cutScene : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag=="player")
+        if (other.gameObject.tag=="player" && GameManager.singeton.gameStatus!=GameStatus.FAILED)
         {
             charac.SetActive(true);
             StartCoroutine(cutsceneenum());
@@ -34,8 +34,15 @@ public class cutScene : MonoBehaviour
     }
      IEnumerator cutsceneenum()
     {
+        SaveManager.instance.money += player.GetComponent<PlayerControl>().taksimetre;
+        player.GetComponent<PlayerControl>().cointect.text += player.GetComponent<PlayerControl>().taksimetre.ToString();
+        SaveManager.instance.Save();
+
+        player.GetComponent<PlayerControl>().taksimetre = 0;
+        player.GetComponent<PlayerControl>().baslangýc = true;
         GameManager.singeton.gameStatus = GameStatus.NONE;
         //player.GetComponent<PlayerControl>().enabled=false;
+        
         maincamera.SetActive(false);
         cutscenecamera.SetActive(true);
         charac.GetComponent<Animator>().SetTrigger("yuru");

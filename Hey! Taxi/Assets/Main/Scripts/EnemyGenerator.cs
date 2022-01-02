@@ -44,7 +44,7 @@ public class EnemyGenerator : MonoBehaviour
 
                     enemy.SetActive(true);
 
-                    transform.position = new Vector3(transform.position.x + 50f, 0,
+                    transform.position = new Vector3(transform.position.x +35f, 0,
                     0);
                 }
                 EnemyTutucu = EnemySelector;

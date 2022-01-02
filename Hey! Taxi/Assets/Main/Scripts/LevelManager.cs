@@ -30,9 +30,23 @@ namespace Heytaxi
         }
         private void Start()
         {
+            SaveManager.instance.Load();
+            SpawnVehicle(SaveManager.instance.currentCostume);
+           
+        }
+        public void SpawnVehicle(int currentindex)
+        {
+
+            if (player.transform.childCount > 0)
+            {
+                Destroy(player.transform.GetChild(0).gameObject);
+            }
+
+            Instantiate(instance.Carsprefabs[currentindex], player.gameObject.transform);
+
 
         }
-     
+
 
     }
 }

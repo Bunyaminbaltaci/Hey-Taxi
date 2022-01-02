@@ -2,14 +2,21 @@ using UnityEngine;
 using DG.Tweening;
 using Heytaxi;
 using System.Collections;
-
+using UnityEngine.UI;
+using TMPro;
 [RequireComponent(typeof(Rigidbody))]
     public class PlayerControl : MonoBehaviour
     {
         private float endZpos = 0;
         private Rigidbody myBody;
         public float speed;
-        private Collider colliderComponent;                         
+        private Collider colliderComponent;
+        public Text taksimetretxt;
+        public TextMeshProUGUI cointect ;
+        public float taksimetre;
+        public bool baslangýc;
+
+
     private void OnEnable()
     {
         InputManager.instance.SwipeTranslate += ActionOnSwipe;
@@ -26,8 +33,8 @@ using System.Collections;
             myBody.isKinematic = false;
             myBody.useGravity = false;
             colliderComponent = GetComponent<Collider>();
-
-            SpawnVehicle(GameManager.singeton.currentCarIndex);
+            cointect.text = SaveManager.instance.money.ToString("F1");
+           
 
 
 
@@ -49,7 +56,12 @@ using System.Collections;
         {
             
             transform.position += (transform.forward * speed * Time.deltaTime);
-           // myBody.velocity = new Vector3(speed, myBody.velocity.y, myBody.velocity.z);
+            // myBody.velocity = new Vector3(speed, myBody.velocity.y, myBody.velocity.z);
+            if (baslangýc==true)
+            {
+                taksimetre += 0.01f;
+                taksimetretxt.text = taksimetre.ToString("F1");
+            }
           
 
 
@@ -62,18 +74,7 @@ using System.Collections;
          
 
     }
-    public void SpawnVehicle(int currentindex)
-    {
-
-        if (transform.childCount > 1)
-        {
-            Destroy(transform.GetChild(1).gameObject);
-        }
-
-        GameObject child = Instantiate(LevelManager.instance.Carsprefabs[currentindex],transform);
-
-
-    }
+   
     void ActionOnSwipe(SwipeType swipeType)
         {
        
