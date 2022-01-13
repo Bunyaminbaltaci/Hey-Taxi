@@ -35,7 +35,7 @@ public class cutScene : MonoBehaviour
      IEnumerator cutsceneenum()
     {
         SaveManager.instance.money += player.GetComponent<PlayerControl>().taksimetre;
-        player.GetComponent<PlayerControl>().cointect.text += player.GetComponent<PlayerControl>().taksimetre.ToString();
+        player.GetComponent<PlayerControl>().cointect.text = SaveManager.instance.money.ToString("F1");
         SaveManager.instance.Save();
 
         player.GetComponent<PlayerControl>().taksimetre = 0;

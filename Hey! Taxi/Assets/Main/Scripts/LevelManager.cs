@@ -37,12 +37,12 @@ namespace Heytaxi
         public void SpawnVehicle(int currentindex)
         {
 
-            if (player.transform.childCount > 0)
+            if (player.transform.childCount > 1)
             {
-                Destroy(player.transform.GetChild(0).gameObject);
+                Destroy(player.transform.GetChild(1).gameObject);
             }
 
-            Instantiate(instance.Carsprefabs[currentindex], player.gameObject.transform);
+            Instantiate(instance.Carsprefabs[currentindex], player.transform);
 
 
         }

@@ -61,6 +61,7 @@ using TMPro;
             {
                 taksimetre += 0.01f;
                 taksimetretxt.text = taksimetre.ToString("F1");
+                
             }
           
 

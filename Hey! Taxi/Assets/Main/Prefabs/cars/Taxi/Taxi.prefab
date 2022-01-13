@@ -92,7 +92,7 @@ SphereCollider:
   m_GameObject: {fileID: 7354649118080770779}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 0.3614391
   m_Center: {x: 0.0900062, y: 0, z: -0.00000008940697}
@@ -107,7 +107,6 @@ GameObject:
   - component: {fileID: 7354649118081073269}
   - component: {fileID: 7354649118081874483}
   - component: {fileID: 7354649118082937755}
-  - component: {fileID: -2429602306602078942}
   m_Layer: 0
   m_Name: Taxi
   m_TagString: Untagged
@@ -186,19 +185,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &-2429602306602078942
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7354649118080777353}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2.1721287, y: 1.496331, z: 5.165426}
-  m_Center: {x: 0, y: 0.9742627, z: 0.11457077}
 --- !u!1 &7354649118080810301
 GameObject:
   m_ObjectHideFlags: 0
@@ -291,7 +277,7 @@ SphereCollider:
   m_GameObject: {fileID: 7354649118080810301}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 0.36143905
   m_Center: {x: -0.09000625, y: 0, z: 0}
@@ -551,7 +537,7 @@ SphereCollider:
   m_GameObject: {fileID: 7354649118080967677}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 0.3614391
   m_Center: {x: 0.09000625, y: 0, z: 0.00000014901161}
@@ -647,7 +633,7 @@ SphereCollider:
   m_GameObject: {fileID: 7354649118080968901}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 0.36143905
   m_Center: {x: -0.09000625, y: 0, z: 0}
