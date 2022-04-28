@@ -10,7 +10,7 @@ namespace Heytaxi
     public class UIManager : MonoBehaviour
     {
         public static UIManager instance;
-        [SerializeField] private GameObject mainMenuPanel, gameMenuPanel, gameOverPanel,shopmenu;
+        [SerializeField] private GameObject mainMenuPanel, gameMenuPanel, gameOverPanel, shopmenu;
         [SerializeField] private Text distanceText;
         [SerializeField] private GameObject camera;
         [SerializeField] private TextMeshProUGUI kasa;
@@ -22,7 +22,7 @@ namespace Heytaxi
         }
         private void Awake()
         {
-            if (instance==null)
+            if (instance == null)
             {
                 instance = this;
             }
@@ -32,7 +32,7 @@ namespace Heytaxi
             mainMenuPanel.SetActive(false);
             gameMenuPanel.SetActive(true);
             GameManager.singeton.gameStatus = GameStatus.PLAYING;
-           // playercontroller.GameStarted();           
+            // playercontroller.GameStarted();           
         }
         public void RetryButton()
         {
@@ -41,8 +41,8 @@ namespace Heytaxi
         public void GameOver()
         {
             gameOverPanel.SetActive(true);
-            }
-            public void shop()
+        }
+        public void shop()
         {
             kasa.text = SaveManager.instance.money.ToString("F1");
             mainMenuPanel.SetActive(false);

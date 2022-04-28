@@ -57,12 +57,12 @@ namespace Heytaxi
             {
                 if (difference.x > 0) //sað kaydýrma
                 {
-            
+
                     swipeType = SwipeType.LEFT;
                 }
                 else if (difference.x < 0) //sol kaydýrma
                 {
-                   
+
 
                     swipeType = SwipeType.RIGHT;
                 }
